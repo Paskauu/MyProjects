@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Login Screen</title>
+        <link rel="stylesheet" href="LoginScreen.Css">
+    </head>
+
+    <body>
+        <div class="LoginScreen">
+            <div class="Login">
+                <div class="LoginInfo">
+                    <div class="LoginInfoWelcome">
+                        <div class="LoginInfoWelcomeTitle">
+                            Welcome back
+                        </div>
+
+                        <div class="LoginInfoWelcomeSubTitle">
+                            to the Harpia SIEM!
+                        </div>
+                    </div>
+
+                    <div class="LoginInfoEmail">
+                        <div class="LoginInfoEmailHeader">
+                            Email*
+                        </div>
+
+                        <div class="LoginInfoEmailBox">
+                            <input class="LoginInfoEmailInp" type="email" placeholder=" " id="EmailInp" onkeyup="ValidEmail()">
+                            <label for="" class="LoginInfoEmailLabel">Enter your email</label>
+                            <label class="LoginInfoEmailError" id="EmailError"></label>
+                        </div>
+                    </div>
+
+                    <div class="LoginInfoPassword">
+                        <div class="LoginInfoPasswordHeader">
+                            Password*
+                        </div>
+
+                        <div class="LoginInfoPasswordBox">
+                            <input class="LoginInfoPasswordInp" type="password" placeholder=" " id="PasswordInp" onkeyup="ValidPassword()">
+                            <label for="" class="LoginInfoPasswordLabel">Enter your password</label>
+                        </div>
+
+                        <img Class="LoginInfoPasswordIcon" src="Images/ShowPasswordIcon.png" id="PasswordIcon">
+                    </div>
+
+                    <label class="LoginInfoPasswordError" id="PasswordError"></label>
+                    
+                    <div class="LoginInfoPasswordErrorMsg" id="ErrorMsg">
+                        <div class="LoginInfoPasswordErrorMsgIcon">
+                            <img class="LoginInfoPasswordErrorMsgIconPNG" src="Images/PasswordErrorIcon.png" alt="">
+                        </div>
+
+                        <label class="LoginInfoPasswordErrorMsgLabel">
+                            Login or Password invalid!
+                        </label>
+
+                        <div class="LoginInfoPasswordErrorMsgExit">
+                            <img class="LoginInfoPasswordErrorMsgExitPNG" src="Images/PasswordErrorExit.png" alt="" onclick="CloseErrorMsg()">
+                        </div>
+                    </div>
+
+                    <div class="LoginInfoLoginSucceedMsg" id="LoginMsg">
+                        <div class="LoginInfoLoginSucceedMsgIcon">
+                            <img class="LoginInfoLoginSucceedMsgIconPNG" src="Images/ForgotPasswordRequestIcon.png" alt="">
+                        </div>
+
+                        <label class="LoginInfoLoginSucceedMsgLabel">
+                            Login Success!
+                        </label>
+
+                        <div class="LoginInfoLoginSucceedMsgExit">
+                            <img class="LoginInfoLoginSucceedMsgExitPNG" src="Images/PasswordErrorExit.png" alt="" onclick="CloseErrorMsg()">
+                        </div>
+                    </div>
+
+                    <div class="LoginInfoOptions">
+                        <div class="LoginInfoOptionsRememberMe">
+                            <input class="LoginInfoOptionsRememberMeInp" type="checkbox">
+                            
+                            <div class="LoginInfoOptionsRememberMeText">
+                                Remember me
+                            </div>
+                        </div>
+
+                        <div class="LoginInfoOptionsForgotMyPassword">
+                            <a class="LoginInfoOptionsForgotMyPasswordLink" href="ForgotPassword.html">Forgot my password</a>
+                        </div>
+                    </div>
+
+                    <div class="LoginInfoSignIn">
+                        <button class="LoginInfoSignInBtn" id="LoginBtn" onclick="Login()">
+                            Sign in 
+                        </button>
+                    </div>
+
+                    <div class="LoginInfoDetails">
+                        © 2022 SafeLabs. All rights reserved. v2.0.0
+                    </div>
+                </div>
+            </div>
+
+            <div class="LoginLogo">
+                <img class="LoginLogoImg" src="Images/Logo.png" alt="">
+            </div>              
+        </div>
+
+        <script src="LoginScreen.js"></script>
+    </body>
+</html> 

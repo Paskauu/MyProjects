@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: rgba(24,24,24,1);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.LoginScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    overflow: auto;
+    min-width: 800px;
+}
+
+@media (max-width: 1280px){
+    .LoginScreen {
+        flex-direction: column;
+        height: 150vh;
+        padding-top: 50px;
+    }
+}
+
+.LoginLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:  50%;
+    height: 100%;
+    border-bottom-left-radius: 20%;
+    background-color: rgba(32 ,32,32,1);
+}
+
+@media (max-width: 1280px){
+    .LoginLogo {
+        border-bottom-left-radius: 0;
+    }
+}
+
+.LoginLogoImg {
+    width: 50%;
+    max-width: 50%;
+}
+
+.Login {
+    width: 50%;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.LoginInfo {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px   ;
+}
+
+.LoginInfoWelcome {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    width: 100%;
+}
+
+@media (max-width: 1280px) {
+    .LoginInfoWelcome {
+        align-items: center;
+    }
+}
+
+.LoginInfoWelcomeTitle {
+    font-family: Inter;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.LoginInfoWelcomeSubTitle {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.LoginInfoEmail {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+.LoginInfoEmailHeader,
+.LoginInfoPasswordHeader {
+    color: white;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+
+.LoginInfoPassword {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    position: relative;
+}
+
+.LoginInfoPasswordBox {
+    position: relative;
+    width: 100%;
+}
+
+.LoginInfoEmailBox {
+    position: relative;
+    width: 100%;
+}
+
+.LoginInfoPasswordInp,
+.LoginInfoEmailInp {
+    width: 100%;
+    height: Fixed (42px);
+    padding: 9px 0 9px 0;
+    border-radius: 6px;
+    border: 1px solid #484848;
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
+    color: white;
+    box-sizing: border-box;
+    padding-left: 1rem;
+}
+
+.LoginInfoPasswordInp:focus,
+.LoginInfoEmailInp:focus {
+    outline: none;
+    border: 1px solid #06B6D4;
+}
+
+.LoginInfoInpError {
+    border: 1px solid #F87171;
+}
+
+.LoginInfoPasswordInp {
+    padding-right: 2rem;
+}
+
+.LoginInfoPasswordLabel,
+.LoginInfoEmailLabel {
+    position: absolute;
+    top: 9px;
+    left: 10px;
+    color: rgba(72,72,72,1);
+    font-size: 13px ;
+}
+
+.LoginInfoEmailError,
+.LoginInfoPasswordError {
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: right;
+    color: #F87171;
+    text-align: start;
+    width: 100%	;
+}
+
+.LoginInfoPasswordErrorMsg {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-radius: 15px;
+    width: 100%;
+    background-color: #2E2121;
+    padding-left: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    transform: scale(0.0000001);
+    position: absolute;
+}
+
+.LoginInfoPasswordErrorMsgPopUp {
+    transform: scale(1);
+    position: relative;
+}
+
+.LoginInfoPasswordErrorMsgIcon {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 7%;
+}
+
+.LoginInfoPasswordErrorMsgIconPNG {
+    width: 100%;
+}
+
+.LoginInfoPasswordErrorMsgLabel {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    width: 80%;
+    padding-left: 10px;
+    color: white;
+}
+
+.LoginInfoPasswordErrorMsgExit {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 5%;
+}
+
+.LoginInfoPasswordErrorMsgExitPNG {
+    width: 100%;
+    cursor: pointer;
+}
+
+.LoginInfoLoginSucceedMsg {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-radius: 15px;
+    width: 100%;
+    background-color: #1B2B25;
+    padding-left: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    transform: scale(0.000001);
+    position: absolute;
+}
+
+.LoginInfoLoginSucceedMsgPopUp {
+    transform: scale(1);
+    position: relative;
+}
+
+.LoginInfoLoginSucceedMsgIcon {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 7%;
+}
+
+.LoginInfoLoginSucceedMsgIconPNG {
+    width: 100%;
+}
+
+.LoginInfoLoginSucceedMsgLabel {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    width: 80%;
+    padding-left: 10px;
+    color: white;
+}
+
+.LoginInfoLoginSucceedMsgExit {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 5%;
+}
+
+.LoginInfoLoginSucceedMsgExitPNG {
+    width: 100%;
+    cursor: pointer;
+}
+
+.LoginInfoPasswordInp:focus + .LoginInfoPasswordLabel,
+.LoginInfoEmailInp:focus + .LoginInfoEmailLabel {
+    color: transparent;
+}
+
+.LoginInfoPasswordInp:not(:placeholder-shown).LoginInfoPasswordInp:not(:focus) + .LoginInfoPasswordLabel,
+.LoginInfoEmailInp:not(:placeholder-shown).LoginInfoEmailInp:not(:focus) + .LoginInfoEmailLabel {
+    color: transparent;
+}
+
+.LoginInfoPasswordIcon {
+    position: absolute;
+    right: 7px;
+    bottom: 7px;
+    width: 20px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.LoginInfoOptions {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+@media (max-width: 1280px) {
+    .LoginInfoOptions {
+        flex-direction: column;
+    }
+}
+
+.LoginInfoOptionsRememberMe {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 50%;
+    gap: 5px;
+}
+
+@media (max-width: 1280px) {
+    .LoginInfoOptionsRememberMe {
+        justify-content: center;
+    }
+}
+
+
+.LoginInfoOptionsRememberMeInp {
+    background-color: #484848;
+    cursor: pointer;
+}
+
+.LoginInfoOptionsRememberMeText {
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.LoginInfoOptionsForgotMyPassword {
+    width: 50%;
+    display: flex;
+    text-align: center;
+    justify-content: end;
+    align-items: center;
+    text-align: center;
+}
+
+@media (max-width: 1280px) {
+    .LoginInfoOptionsForgotMyPassword {
+        justify-content: center;
+    }
+}
+
+.LoginInfoOptionsForgotMyPasswordLink {
+    text-decoration: none;
+    color: #0891B2;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media (max-width: 1280px) {
+    .LoginInfoOptionsForgotMyPasswordLink {
+        justify-content: center;
+    }
+}
+
+
+.LoginInfoSignIn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.LoginInfoSignInBtn {
+    width: 100%;
+    height: Hug (40px);
+    padding: 8px 16px 8px 16px;
+    border-radius: 6px;
+    gap: 8px;
+    background-color: #0891B2;
+}
+
+.LoginInfoDetails {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-top: 50px;
+    color: rgba(72,72,72,1);
+}
