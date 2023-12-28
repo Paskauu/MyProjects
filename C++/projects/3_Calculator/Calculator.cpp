@@ -1,12 +1,11 @@
 #include <iostream>     // std::cout & std::cin
 #include <vector>       // std::vector
 #include <cmath>        // Math Operators
-#include <array>        // std::array
 #include <algorithm>    // std::find
 
 int main() {
     char Operator;
-    char Command;
+    std::string Command;
     double Number;
     double Result; 
     std::string ValidOperators = "+-*/^";
@@ -52,7 +51,7 @@ int main() {
                 std::cout << "Exit? [y] [n] ";
                 std::cin.clear();
                 std::cin >> std::ws >> Command;
-                if(Command && ValidCommands.find(Command) != std::string::npos) {
+                if(ValidCommands.find(Command) != std::string::npos) {
                     break;
                 } else {
                     std::cin.clear();
@@ -60,14 +59,14 @@ int main() {
                 }
             }
             while (true);
-            if(Command == 'y'){
+            if(Command == "y"){
                 break;
             }
         }
         
         do {
-            std::cout << "Enter the operator: ";
             std::cin.clear();
+            std::cout << "Enter the operator: ";
             std::cin >> std::ws >> Operator;
             if(ValidOperators.find(Operator) != std::string::npos) {
                 break;   
