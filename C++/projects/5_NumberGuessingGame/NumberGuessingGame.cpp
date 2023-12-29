@@ -5,7 +5,7 @@
 
 int main() {
     srand(time(NULL));
-    int NumToGuess = rand() % 100 + 1;
+    int NumToGuess;
     int NumChances;
     int NumGuessed;
     std::string Command;
@@ -17,6 +17,7 @@ int main() {
     do {
         std::cout << "How many chances do you want?\n";
         std::cin >> NumChances;
+        NumToGuess = rand() % 100 + 1;
 
         do {
             do {
