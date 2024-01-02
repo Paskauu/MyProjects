@@ -48,33 +48,11 @@ int main() {
                     break;
                 }
                 
-                //    **This part of the code is gonna give you a above/below hint.
                 if(NumGuessed < NumToGuess) {
                     std::cout << "I'm thinking in a number above "<< NumGuessed << "\n";
                 } else {
                     std::cout << "I'm thinking in a number below "<< NumGuessed << "\n";
                 }
-
-                //    **This part of the code is gonna give you a between numbers hint.
-                    // do {
-                    //     std::cin.clear();
-                    //     std::cout << "Want a hint? [Y] [N]\n";
-                    //     std::cin >> Command;
-                    //     std::transform(Command.begin(),Command.end(),Command.begin(),::toupper);
-                    //     if(ValidCommand.find(Command) != std::string::npos) {
-                    //         break;
-                    //     } else {
-                    //         std::cin.clear();
-                    //         std::cout << "Invalid input. Try againd.\n";
-                    //     }
-                    // } while (true);
-
-                    // if(Command == "Y") {
-                    //     int NumMinHint = NumToGuess - rand() % NumToGuess;
-                    //     int NumMaxHint = NumToGuess + rand() % NumToGuess;
-                    //     NumMaxHint > 100 ? 100 : NumMaxHint;
-                    //     std::cout << "Your number is between: "<< NumMinHint << " and " << NumMaxHint << "\n";
-                    // }
                 
             }
 
