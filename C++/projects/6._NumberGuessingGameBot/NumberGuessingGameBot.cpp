@@ -51,8 +51,8 @@ int main() {
 
                 if(*pNumGuessed < *pNumToGuess) {
                     std::cout << "I'm thinking in a number above "<< *pNumGuessed << "\n\n";
-                    *pLowerNumGuessed = *pNumGuessed + *pMinNumToGuess;
-                    *pHigherNumGuessed -= *pLowerNumGuessed;
+                    *pHigherNumGuessed -= (*pNumGuessed - *pLowerNumGuessed);
+                    *pLowerNumGuessed = *pNumGuessed + 1;
                 } else {
                     std::cout << "I'm thinking in a number below "<< *pNumGuessed << "\n\n";
                     *pHigherNumGuessed -= *pHigherNumGuessed - (*pNumGuessed - *pLowerNumGuessed);
