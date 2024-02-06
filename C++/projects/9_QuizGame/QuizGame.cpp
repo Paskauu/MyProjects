@@ -54,12 +54,11 @@ int main() {
     int QuestionsArraySize = sizeof(Questions)/sizeof(Questions[0]);
     int AnswersArraySize = sizeof(Answers[0])/sizeof(Answers[0][0]);
     int AnswersLettersArraySize = sizeof(AnswersLetters)/sizeof(AnswersLetters[0]);
-    Shuffle(Questions, QuestionsArraySize);
     int UserScore = 0;
 
     for(int i  = 0; i < QuestionsArraySize; i++) {
-        std::cout << "###############################" << '\n';
         std::cout << i + 1 << "ª) " << Questions[i] << '\n';
+        Shuffle(Answers[i], AnswersArraySize);
         for(int j = 0; j < AnswersArraySize; j++) {
             std::cout << AnswersLetters[j] << ") " << Answers[i][j] << '\n';
         }
