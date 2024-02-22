@@ -1,12 +1,15 @@
-import './App.css'
-import Student from "./Student.tsx"
+import UserGreeting from './Components/UserGreeting'  
 
 function App() {
   return (
-    <div className='Page'>
-      <Student Name="Caio Covre Pascoal" Age={20} IsStudent/>
-      <Student/>
-    </div>
+    <>
+      <UserGreeting 
+        Data={{
+          IsloggedIn:true, 
+          UserName:"Caio"
+        }}/>
+      <div>asdddddddddddasdasdasdasdasd</div>
+    </>
   )
 }
 
